@@ -1,7 +1,7 @@
 const Hero = () => {
 	return (
 		<section className="hero">
-			<p className="eyebrow">Hello, I'm Robert</p>
+			<p className="eyebrow">Hi, I'm Robert Evans</p>
 			<h1>Software Engineer</h1>
 			<p className="hero-text">
 				I recently graduated with a degree in computer science! I enjoy building
