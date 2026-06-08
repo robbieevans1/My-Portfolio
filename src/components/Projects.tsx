@@ -8,18 +8,20 @@ type Project = {
 
 const projects: Project[] = [
 	{
+		title: "Robflix",
+		description:
+			"A movie streaming web application that uses films from the Internet Archive, allowing users to browse and watch free movies through a clean, Netflix-inspired interface.",
+		tech: ["Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma"],
+		link: "#",
+		github: "https://github.com/robbieevans1/robflix",
+	},
+	{
 		title: "Nuuvi",
-		description: "An app to check if a web domain is available",
+		description:
+			"A web application that helps users quickly check whether a domain name is available.",
 		tech: ["Next.js", "Postgres", "Prisma"],
 		link: "https://www.nuuvi.dev",
 		github: "https://github.com/robbieevans1/nuuvi",
-	},
-	{
-		title: "Coming Soon",
-		description: "Coming soon.",
-		tech: ["Next.js", "Postgres", "Prisma"],
-		link: "#",
-		github: "#",
 	},
 ];
 
