@@ -1,6 +1,6 @@
 export const About = () => {
 	return (
-		<section className="section">
+		<section className="section" id="about">
 			<h2>About Me</h2>
 			<p>
 				I recently graduated from Western Governors University with a degree in
