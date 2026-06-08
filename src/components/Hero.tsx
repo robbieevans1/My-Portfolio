@@ -4,14 +4,19 @@ const Hero = () => {
 			<p className="eyebrow">Hi, I'm Robert Evans</p>
 			<h1>Software Engineer</h1>
 			<p className="hero-text">
-				I recently graduated with a degree in computer science! I enjoy building
-				applications and learning new things.
+				I’m a recent Computer Science graduate with hands-on experience in
+				React, Java, C#, and Python. I enjoy building practical applications,
+				solving problems, and adapting to new technologies. I’m currently
+				seeking entry-level software engineering opportunities where I can
+				contribute, learn, and grow.
 			</p>
 
 			<div className="hero-buttons">
-        <a href="#projects">View Projects</a>
-        <a href="contact" className="secondary">Contact Me</a>
-      </div>
+				<a href="#projects">View Projects</a>
+				<a href="contact" className="secondary">
+					Contact Me
+				</a>
+			</div>
 		</section>
 	);
 };
