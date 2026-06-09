@@ -2,7 +2,7 @@ type Project = {
 	title: string;
 	description: string;
 	tech: string[];
-	link: string;
+	link?: string;
 	github: string;
 };
 
@@ -12,7 +12,6 @@ const projects: Project[] = [
 		description:
 			"A movie streaming web application that uses films from the Internet Archive, allowing users to browse and watch free movies through a clean, Netflix-inspired interface.",
 		tech: ["Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma"],
-		link: "#",
 		github: "https://github.com/robbieevans1/robflix",
 	},
 	{
@@ -43,9 +42,15 @@ const Projects = () => {
 						</div>
 
 						<div className="project-links">
-							<a href={project.link} target="_blank" rel="noopener noreferrer">
-								Live Site
-							</a>
+							{project.link && (
+								<a
+									href={project.link}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Live Site
+								</a>
+							)}
 
 							<a
 								href={project.github}
