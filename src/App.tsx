@@ -7,20 +7,20 @@ import Contact from "./components/Contact";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
-  return (
-    <>
-      <Navbar />
+	return (
+		<>
+			<Navbar />
 
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Contact />
-      </main>
+			<main>
+				<Hero />
+				<Projects />
+				<About />
+				<Contact />
+			</main>
 
-      <ScrollToTopButton />
-    </>
-  );
+			<ScrollToTopButton />
+		</>
+	);
 }
 
 export default App;
