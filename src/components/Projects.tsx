@@ -11,7 +11,7 @@ const projects: Project[] = [
 		title: "Robflix",
 		description:
 			"A movie streaming web application that uses films from the Internet Archive, allowing users to browse and watch free movies through a clean, Netflix-inspired interface.",
-		tech: ["Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma"],
+		tech: ["Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma","Auth.js"],
 		link: "https://robflix-three.vercel.app/",
 		github: "https://github.com/robbieevans1/robflix",
 	},
