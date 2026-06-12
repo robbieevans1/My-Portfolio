@@ -12,7 +12,7 @@ const projects: Project[] = [
 		description:
 			"UpNext is a stack-based task management app that helps users focus on what they should do next. Mandatory tasks stay at the top, while grouped recurring tasks rotate after completion so users avoid neglecting important tasks.",
 		tech: ["Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma"],
-		link: "https://upnext-4fcbwbads-robbieevans1s-projects.vercel.app/",
+		link: "https://upnext-liard.vercel.app/",
 		github: "https://github.com/robbieevans1/upnext",
 	},
 	
