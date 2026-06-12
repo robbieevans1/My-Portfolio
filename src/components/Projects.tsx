@@ -8,6 +8,15 @@ type Project = {
 
 const projects: Project[] = [
 	{
+		title: "UpNext",
+		description:
+			"UpNext is a stack-based task management app that helps users focus on what they should do next. Mandatory tasks stay at the top, while grouped recurring tasks rotate after completion so users avoid neglecting important tasks.",
+		tech: ["Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma"],
+		link: "https://upnext-4fcbwbads-robbieevans1s-projects.vercel.app/",
+		github: "https://github.com/robbieevans1/upnext",
+	},
+	
+	{
 		title: "Robflix",
 		description:
 			"A movie streaming web application that uses films from the Internet Archive, allowing users to browse and watch free movies through a clean, Netflix-inspired interface.",
