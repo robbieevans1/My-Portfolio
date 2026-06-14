@@ -47,6 +47,14 @@ const projects: Project[] = [
 		github: "https://github.com/robbieevans1/robflix",
 	},
 	{
+		title: "Portfolio",
+		description:
+			"A portfolio website to display current projects I am working on.",
+		tech: ["React", "TypeScript"],
+		link: "https://robbieevans1.github.io/My-Portfolio/",
+		github: "https://github.com/robbieevans1/My-Portfolio",
+	},
+	{
 		title: "Nuuvi",
 		description:
 			"A web application that helps users quickly check whether a domain name is available.",
