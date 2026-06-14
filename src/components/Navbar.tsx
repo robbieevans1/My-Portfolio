@@ -9,7 +9,7 @@ function Navbar() {
 				<a href="#about">About</a>
 				<a href="#projects">Projects</a>
 				<a href="#contact">Contact</a>
-				<a href="/resume.pdf" download="Robert_Evans_Resume.pdf">
+				<a href="/Robert_Evans_Resume.pdf" download="Robert_Evans_Resume.pdf">
 					Resume
 				</a>
 			</div>
