@@ -225,6 +225,12 @@ h2 {
 	width: fit-content;
 }
 
+.last-commit {
+	margin-top: 0.75rem;
+	font-size: 0.9rem;
+	color: #9ca3af;
+}
+
 /* Scroll To Top Button */
 .scroll-top-button {
 	position: fixed;
