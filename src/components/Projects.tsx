@@ -1,9 +1,25 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 type Project = {
 	title: string;
 	description: string;
 	tech: string[];
 	link?: string;
 	github: string;
+};
+
+type ProjectWithCommit = Project & {
+	latestCommitDate?: string | null;
+};
+
+type GitHubCommit = {
+	commit: {
+		committer: {
+			date: string;
+		};
+	};
 };
 
 const projects: Project[] = [
@@ -15,12 +31,18 @@ const projects: Project[] = [
 		link: "https://upnext-liard.vercel.app/",
 		github: "https://github.com/robbieevans1/upnext",
 	},
-	
 	{
 		title: "Robflix",
 		description:
 			"A movie streaming web application that uses films from the Internet Archive, allowing users to browse and watch free movies through a clean, Netflix-inspired interface.",
-		tech: ["Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma","Auth.js"],
+		tech: [
+			"Next.js",
+			"TypeScript",
+			"Tailwind CSS",
+			"Postgres",
+			"Prisma",
+			"Auth.js",
+		],
 		link: "https://robflix-three.vercel.app/",
 		github: "https://github.com/robbieevans1/robflix",
 	},
@@ -34,16 +56,108 @@ const projects: Project[] = [
 	},
 ];
 
+function getRepoInfo(githubUrl: string) {
+	const url = new URL(githubUrl);
+	const [owner, repo] = url.pathname.split("/").filter(Boolean);
+
+	return { owner, repo };
+}
+
+async function getLatestCommitDate(githubUrl: string) {
+	try {
+		const { owner, repo } = getRepoInfo(githubUrl);
+
+		const response = await fetch(
+			`https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`,
+			{
+				headers: {
+					Accept: "application/vnd.github+json",
+				},
+			}
+		);
+
+		if (!response.ok) {
+			return null;
+		}
+
+		const commits: GitHubCommit[] = await response.json();
+
+		return commits[0]?.commit.committer.date ?? null;
+	} catch {
+		return null;
+	}
+}
+
+function formatRelativeDate(dateString: string) {
+	const date = new Date(dateString);
+	const now = new Date();
+
+	const diffMs = date.getTime() - now.getTime();
+	const diffDays = Math.round(diffMs / (1000 * 60 * 60 * 24));
+
+	const formatter = new Intl.RelativeTimeFormat("en", {
+		numeric: "auto",
+	});
+
+	if (Math.abs(diffDays) < 1) {
+		return "today";
+	}
+
+	if (Math.abs(diffDays) < 30) {
+		return formatter.format(diffDays, "day");
+	}
+
+	const diffMonths = Math.round(diffDays / 30);
+
+	if (Math.abs(diffMonths) < 12) {
+		return formatter.format(diffMonths, "month");
+	}
+
+	const diffYears = Math.round(diffMonths / 12);
+
+	return formatter.format(diffYears, "year");
+}
+
 const Projects = () => {
+	const [projectsWithCommits, setProjectsWithCommits] =
+		useState<ProjectWithCommit[]>(projects);
+
+	useEffect(() => {
+		async function loadCommitDates() {
+			const updatedProjects = await Promise.all(
+				projects.map(async (project) => {
+					const latestCommitDate = await getLatestCommitDate(project.github);
+
+					return {
+						...project,
+						latestCommitDate,
+					};
+				})
+			);
+
+			setProjectsWithCommits(updatedProjects);
+		}
+
+		loadCommitDates();
+	}, []);
+
 	return (
 		<section className="section" id="projects">
 			<h2>Projects</h2>
 
 			<div className="project-grid">
-				{projects.map((project) => (
+				{projectsWithCommits.map((project) => (
 					<article className="project-card" key={project.title}>
 						<h3>{project.title}</h3>
+
 						<p>{project.description}</p>
+
+						<p className="last-commit">
+							Last commit:{" "}
+							{project.latestCommitDate
+								? formatRelativeDate(project.latestCommitDate)
+								: "Loading..."}
+						</p>
 
 						<div className="tech-list">
 							{project.tech.map((item) => (
