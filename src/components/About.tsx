@@ -16,7 +16,7 @@ export const About = () => {
 				and experimentation.
 			</p>
 			<p>
-				Outside of coding, I’m usually exercising, reading fantasy novels, going to comedy shows, or trying new restaurants.
+				Outside of coding, I’m usually exercising, reading or listening to fantasy novels, going to comedy shows, or trying new restaurants.
 				I also used to play guitar and sing, and I’d like to get back into performing live and recording. Whether I’m
 				building an app, learning game dev, or getting lost in a good story, I’ve always been drawn to creating
 				things and improving at them.

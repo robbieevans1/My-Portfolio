@@ -5,7 +5,7 @@ const Hero = () => {
 			<h1>Software Engineer</h1>
 			<p className="hero-text">
 				I’m a recent Computer Science graduate with hands-on experience in
-				React, Java, C#, and Python. I enjoy building practical applications,
+				React, Java, C#, and Python. I enjoy building software applications,
 				solving problems, and adapting to new technologies. I’m currently
 				seeking entry-level software engineering opportunities where I can
 				contribute, learn, and grow.
