@@ -23,16 +23,13 @@ type GitHubCommit = {
 };
 
 const projects: Project[] = [
-{
-	title: "DropStore",
-	description:
-		"DropStore is a limited-drop ecommerce app where products release at scheduled times with limited stock. It includes product listings, inventory tracking, cart behavior, and an admin-style sales dashboard for managing drops.",
-	tech: ["Laravel", "Vue.js", "Inertia.js", "Tailwind CSS", "MySQL"],
-	link: "YOUR_VERCEL_OR_DEPLOYED_LINK_HERE",
-	github: "https://github.com/robbieevans1/dropstore",
-},
-
-
+	{
+		title: "WebScraper",
+		description:
+			"A web scraping tool for extracting structured data from websites and organizing the results for analysis.",
+		tech: ["Python", "Beautiful Soup", "Requests"],
+		github: "https://github.com/robbieevans1/webscrape",
+	},
 	{
 		title: "UpNext",
 		description:
