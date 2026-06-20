@@ -24,7 +24,7 @@ type GitHubCommit = {
 
 const projects: Project[] = [
 	{
-		title: "WebScraper",
+		title: "Web Scraper",
 		description:
 			"A web scraping tool for extracting structured data from websites and organizing the results for analysis.",
 		tech: ["Python", "Beautiful Soup", "Requests"],
