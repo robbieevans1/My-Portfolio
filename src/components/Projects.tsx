@@ -24,18 +24,18 @@ type GitHubCommit = {
 
 const projects: Project[] = [
 	{
-		title: "Web Scraper",
-		description:
-			"A web scraping tool for extracting structured data from websites and organizing the results for analysis.",
-		tech: ["Python", "Beautiful Soup", "Requests"],
-		github: "https://github.com/robbieevans1/webscrape",
-	},
-	{
 		title: "LiftLog (In Progress)",
 		description:
 			"A workout tracking app for logging lifts, organizing training history, and monitoring progress over time.",
 		tech: ["Java", "Spring Boot", "TypeScript", "MySQL"],
 		github: "https://github.com/robbieevans1/liftlog",
+	},
+	{
+		title: "Web Scraper",
+		description:
+			"A web scraping tool for extracting structured data from websites and organizing the results for analysis.",
+		tech: ["Python", "Beautiful Soup", "Requests"],
+		github: "https://github.com/robbieevans1/webscrape",
 	},
 	{
 		title: "UpNext",
