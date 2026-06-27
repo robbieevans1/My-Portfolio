@@ -31,6 +31,13 @@ const projects: Project[] = [
 		github: "https://github.com/robbieevans1/webscrape",
 	},
 	{
+		title: "LiftLog (In Progress)",
+		description:
+			"A workout tracking app for logging lifts, organizing training history, and monitoring progress over time.",
+		tech: ["Java", "Spring Boot", "TypeScript", "MySQL"],
+		github: "https://github.com/robbieevans1/liftlog",
+	},
+	{
 		title: "UpNext",
 		description:
 			"UpNext is a stack-based task management app that helps users focus on what they should do next. Mandatory tasks stay at the top, while grouped recurring tasks rotate after completion so users avoid neglecting important tasks.",
